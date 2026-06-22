@@ -61,6 +61,7 @@ indulgent, pamper, nestled, oasis, "a stay to remember," "home away from home."
 **Sub:** Six private beach villas. Your own butler and chef. One hour from Johannesburg —
 and a world from everything.
 **CTA buttons:** `Plan your stay` · `See the villas`
+**Trust line (small, under CTAs):** *9.3 / 10 on Booking.com · "Superb"*
 
 ### Intro (the idea)
 > Some places try to impress you. This one just lets you breathe.
@@ -180,8 +181,9 @@ B&B/self-catering option remains available.
 > **Marlin weather, off your own beach.**
 > The Bazaruto channel is serious water — black and blue marlin, sailfish, giant kingfish,
 > king mackerel, yellowfin tuna, barracuda. Marlin season runs roughly `{Oct–Feb}`; the rest
-> of the year still fishes hard. Go heavy-tackle, light-tackle, drop-shot or fly. Your skipper
-> knows the spots; you bring the stories home. `{Boat / charter details}`.
+> of the year still fishes hard. Go heavy-tackle, light-tackle, drop-shot or fly. We run our
+> **own two catamarans**, so the boat's ready when you are and the skipper already knows the
+> water. You just bring the stories home.
 > `Book a charter →`
 
 ### Diving & snorkelling
@@ -194,7 +196,7 @@ B&B/self-catering option remains available.
 
 ### Island hopping
 > **The whole archipelago, off your own sand.**
-> Sail into the Bazaruto by dhow, catamaran or ski-boat. White sandbanks that appear at low
+> Sail into the Bazaruto on our own catamarans (or a traditional dhow). White sandbanks that appear at low
 > tide, reefs in the middle of nowhere, a picnic or a braai set up on an empty island, and
 > you home in time for sundowners on the deck.
 > `Plan a day on the water →`

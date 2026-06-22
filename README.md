@@ -21,10 +21,13 @@ walk on the dunes and a chef-cooked dinner belong in the same sentence.
 
 | | |
 |---|---|
-| **Where** | Mahaque Beach, Vilanculos, Inhambane Province, Mozambique |
+| **Where** | Mahaque Beach, Vilanculos, Inhambane Province, Mozambique — 3.5-acre beachfront |
 | **What** | 6 private beachfront villas — each 4 en-suite bedrooms, sleeps up to 8 |
-| **Each villa** | Private pool, deck over the Indian Ocean, open-plan kitchen & living |
+| **Each villa** | Private **plunge pool**, furnished patio, open-plan fully-equipped kitchen & living; A/C, mosquito nets, safe & en-suite per bedroom, BBQ |
+| **On site** | Clubhouse / entertainment area + **infinity pool** over the ocean |
 | **Service** | Dedicated **butler** + **chef** per villa (full board) |
+| **Boats** | **2 owned catamarans** for fishing & island trips — in-house, not outsourced |
+| **Reputation** | **9.3 / 10** on Booking.com ("Superb"); ~4/5 TripAdvisor, #5 of 22 in Vilanculos |
 | **Getting there** | ~1-hour flight Johannesburg → Vilanculos, then ~10 min transfer |
 | **The big draw** | A private open door to the **Bazaruto Archipelago** |
 

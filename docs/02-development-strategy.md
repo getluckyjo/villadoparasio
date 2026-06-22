@@ -69,6 +69,12 @@ These handle the things a PMS handles badly: **time slots, capacity, per-person 
 seasonality, weather/tide rescheduling, waivers** — for fishing charters, dives, snorkel
 trips, island hops, dune picnics, township food tours.
 
+> **Big advantage: the property owns 2 catamarans.** Fishing and island-hopping run on
+> *in-house* boats, so the activities engine manages **owned inventory** (two vessels, their
+> capacity and daily slots) rather than reselling third-party operators. That means cleaner
+> margins, real-time availability we control, and an easy cross-sell from the stay booking.
+> Model each catamaran as a bookable resource with capacity + time slots in FareHarbor/Checkfront.
+
 | Option | Best for |
 |---|---|
 | **FareHarbor** ✅ | Mature tours/activities engine, great mobile checkout, no monthly fee (takes a small booking fee), strong for charters & timeslot inventory |

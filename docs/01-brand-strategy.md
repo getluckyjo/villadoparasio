@@ -73,7 +73,13 @@ This is the single most important strategic insight on the page:
 |---|---|---|---|
 | **Island ultra-luxury** | Kisawa, Azura Benguerra, Anantara Bazaruto, Benguerra Lodge | **~US$900–$3,000+ pp/night**, all-inclusive | Boat/air transfer, four-figure nights, less family-flexible |
 | **Mainland lodges (B&B)** | Vilanculos Beach Lodge | **~US$250–$310 per unit/night**, B&B | Rooms not villas; shared lodge; you sort your own meals/structure |
-| **➜ Vila do Paraíso** | *(us)* | **Private 4-bed villa + butler + chef + full board** | **The gap nobody owns** |
+| **➜ Vila do Paraíso** | *(us)* | Currently listed **~US$89–$145/night** (self-catering); moving to **full board** | **Private 4-bed villa + butler + chef — the gap nobody owns** |
+
+> **Pricing flag:** the current Booking.com entry rate (~$89–$145/night for an 8-sleeper
+> villa) is *strikingly* low and may be per-room or legacy. The full-board pivot is the
+> moment to **re-rate deliberately**: still far below island lodges, but priced to reflect
+> butler + chef + every meal + owned-boat access. Don't leave value on the table — "reasonable"
+> should mean *exceptional value*, not *cheap*. Owners must set the new full-board rate card.
 
 **The opening:** there is no one offering *whole-villa privacy + included butler + included
 chef + full board* at an accessible price on this coast. Island lodges are exclusive and
@@ -94,11 +100,18 @@ expensive; mainland lodges are rooms-and-B&B. Vila do Paraíso sits in the empty
   butler and chef, and dinner already handled."
 
 ### Where we win
-1. **Privacy** — a *whole* villa, not a room. Your people, your pool, your deck.
+1. **Privacy** — a *whole* villa, not a room. Your people, your plunge pool, your deck.
 2. **Service included** — butler *and* chef come standard, not as an upsell.
 3. **Full board, reasonably priced** — no self-catering admin, no island bill.
 4. **Reach** — 1-hour flight from Joburg + 10-minute transfer. Barefoot by lunchtime.
 5. **The open door to Bazaruto** — fishing, diving, island hopping straight off the beach.
+6. **We own the boats** — 2 in-house catamarans run the fishing & island trips. The
+   archipelago product is ours end-to-end, not a third-party booking we resell.
+
+### The proof is already in the reviews
+The property scores **9.3/10 ("Superb") on Booking.com** and ~4/5 on TripAdvisor (#5 of 22
+in Vilanculos). The experience already over-delivers — the brand's job is to *show* it and
+capture the booking direct. Surface this score prominently (homepage, villas, booking flow).
 
 ### Where we must be honest (and design around)
 - **Mainland, not island** — we don't pretend to be on Benguerra. We *own* the mainland
