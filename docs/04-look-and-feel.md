@@ -30,6 +30,22 @@ A grounded, natural base (sand, shell, ocean, palm) with a single warm, celebrat
 family drawn from 2M and the Mozambican coast. **Roughly 80% neutral, 15% deep ocean, 5%
 warm accent.**
 
+### Source of truth — the logo colours
+The existing **Vila do Paraíso logo** sets three non-negotiable brand colours. The web
+palette below is built to *harmonise* with these, not fight them:
+
+| Token | Name | Hex (approx — confirm from vector) | In the logo |
+|---|---|---|---|
+| `--ink` | Palm Charcoal | `#38322A` | Palms, lettering, all line work — warm near-black |
+| `--sun` | Sun Gold | `#F4B82A` | The rising sun |
+| `--aqua` | Sky Aqua | `#BFE3EC` | The sky dome (pale, gradient to white) |
+
+> Use **Palm Charcoal `--ink`** as the primary text/line colour everywhere (it matches the
+> logo exactly and reads warmer than a cold black). **Sun Gold** is the brand's hero warm
+> accent — it ties the 2M "sunset" idea straight to the logo's sun. **Sky Aqua** is a soft
+> tint for backgrounds, the ocean, and hover states. Confirm exact hex values once we have
+> the vector file.
+
 ### Neutrals — the canvas (use most)
 | Token | Name | Hex | Use |
 |---|---|---|---|
@@ -41,16 +57,25 @@ warm accent.**
 ### Deep — the ocean & ink (anchor & text)
 | Token | Name | Hex | Use |
 |---|---|---|---|
-| `--indigo` | Dhow Indigo | `#1E3A4C` | Headlines, footer, deep backgrounds, primary ink |
+| `--ink` | Palm Charcoal | `#38322A` | **Primary text & line colour** (matches the logo) |
+| `--indigo` | Dhow Indigo | `#1E3A4C` | Deep-ocean backgrounds, footer, dark sections |
 | `--tide` | Tidewater Teal | `#2E6E66` | Secondary deep, links, calm accent |
 | `--palm` | Casuarina Green | `#4A5D3A` | Natural/eco accent, subtle |
 
-### Warm accent — the 2M flash (use sparingly, 5%)
+### Warm accent — the sun & the 2M flash (use sparingly, 5%)
 | Token | Name | Hex | Use |
 |---|---|---|---|
+| `--sun` | Sun Gold *(logo)* | `#F4B82A` | Hero warm accent — the logo's sun, highlights, hover |
 | `--sunset` | 2M Sunset Red | `#C0392B` | Primary CTA, the star mark, moments of joy |
-| `--amber` | Mukwa Gold/Amber | `#C9962E` | Highlights, the "sun", secondary accent, hover |
+| `--amber` | Mukwa Amber | `#C9962E` | Deeper gold companion to Sun Gold, gradients |
 | `--coral` | Capulana Coral | `#E2725B` | Soft warm accent, illustration, tags |
+
+> **Reconciling logo vs. system:** the logo is *sunnier and friendlier* than a pure
+> Kisawa-muted palette — which actually serves the brief's "down-to-earth, 2M flavour" side.
+> So we tune the system **slightly warmer and brighter** than ultra-muted, and keep it feeling
+> elevated through restraint: lots of white space, refined type, and the warm colours used as
+> *flashes*, not fields. Sun Gold (logo) and 2M Sunset Red are cousins — gold for warmth and
+> highlights, red reserved for the primary call-to-action.
 
 > **Accessibility:** body text in `--indigo` on `--shell`/`--sand` for AA+. `--sunset` is for
 > buttons and small marks, not long text. Always test CTA contrast against its background.
@@ -164,9 +189,36 @@ Photography *is* the design. Direction:
 
 - **Line icons,** thin and hand-feel rather than geometric-perfect: fish, mask & snorkel,
   dhow, palm, pool, star, plate, plane.
-- **Brand mark / logo direction:** a simple wordmark — *Vila do Paraíso* in the display serif —
-  optionally paired with a tiny hand-drawn star or dhow. Works in Indigo on Shell, Shell on
-  Indigo, and a one-colour reverse. (Confirm whether an existing logo exists before designing.)
+### Logo (existing mark)
+
+**What we have:** a full **badge logo** — two palm silhouettes, a golden rising sun, a
+pale-aqua sky dome, beach grass and three birds, over a hand-drawn banner reading
+**VILA DO PARAISO** with **MOÇAMBIQUE** beneath. Warm, friendly, recognisable, and already
+carrying real review equity (9.3/10). Colours: Palm Charcoal, Sun Gold, Sky Aqua on white.
+
+**The tension to manage:** it's an *illustrative/literal* badge — closer to "friendly
+tropical holiday" than the pared-back "barefoot-luxury" editorial of the reference sites — and
+it's detail-heavy, so it won't read cleanly at small sizes (site header, favicon, social avatar).
+
+**Recommended approach — keep the equity, add range (a small logo *system*):**
+1. **Primary badge** — the existing full logo. Use it big and with breathing room: hero,
+   footer, print, signage, the about page. Don't shrink it below ~140px wide.
+2. **Secondary mark (commission)** — a *simplified* version distilled from the same artwork:
+   the **palm-and-sun roundel only**, no banner, for the sticky site header, favicon, app icon
+   and social avatar. Reads at 32px.
+3. **Wordmark (commission)** — **VILA DO PARAÍSO** set in the brand display serif, clean, for
+   tight horizontal spaces and email signatures.
+4. **Reverse versions** — single-colour Shell/white version of all three for the dark indigo
+   footer and over photography. (The current badge needs a knockout/reverse variant.)
+5. **Light refinement (optional, recommended)** — keep every motif (palm, sun, birds, banner —
+   they're strong and ownable), but a designer redraw could tighten the line weights, refine the
+   lettering, and align the sun gold/aqua to the exact tokens. Evolution, not revolution — we
+   protect the recognition while lifting it toward "barefoot luxury."
+
+> **Do not** redraw or replace the logo without owner sign-off — it has equity. The above is a
+> *system around* it, not a rebrand.
+> **Files needed** (see `/assets/brand/`): vector master (`.ai`/`.svg`/`.pdf`), transparent PNG,
+> and a reverse/white version. Once supplied, I'll add them to the repo and lock the exact hex.
 
 ---
 
@@ -185,6 +237,10 @@ simple. So nature shines.
 
 ```css
 :root {
+  /* brand — from the logo (source of truth) */
+  --ink:       #38322A; /* Palm Charcoal — primary text & line colour */
+  --sun:       #F4B82A; /* Sun Gold — hero warm accent */
+  --aqua:      #BFE3EC; /* Sky Aqua — soft tint / ocean */
   /* neutrals */
   --shell:     #F6F1E7;
   --sand:      #E7DAC4;

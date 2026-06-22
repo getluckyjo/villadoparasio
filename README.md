@@ -67,11 +67,12 @@ the experience *and* take the booking.
 
 ## A note on the name
 
-The property trades as **Vila do Paraíso** (Portuguese, one "l"). English-speaking
-guests and some listings write "Villa do Paraiso." Recommendation: lead with the
-authentic **Vila do Paraíso** in brand display, and treat "Villa do Paraiso" as an
-SEO alias in metadata and alt text so we capture both searches. See
-[`docs/02-development-strategy.md`](docs/02-development-strategy.md) for the SEO handling.
+The official **logo** renders the name as **VILA DO PARAISO** (Portuguese, one "l", no
+accent) with **MOÇAMBIQUE** beneath. English-speaking guests and some listings write
+"Villa do Paraiso." Recommendation: **match the logo's spelling — "Vila do Paraiso" — in the
+wordmark and headings**; the accented *Vila do Paraíso* is fine in flowing body copy; and
+treat "Villa do Paraiso" as an SEO alias in metadata and alt text so we capture both searches.
+See [`docs/02-development-strategy.md`](docs/02-development-strategy.md) for the SEO handling.
 
 ---
 
