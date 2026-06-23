@@ -11,6 +11,8 @@ const {
   title = "Vila do Paraíso — Barefoot luxury in Vilanculos, Mozambique",
   description = "Vila do Paraíso (Villa do Paraiso), Vilanculos, Mozambique — private beachfront villas with butler, chef & full board, gateway to the Bazaruto Archipelago. World-class fishing, diving & family holidays, one hour from Johannesburg.",
 } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const ogImage = new URL(`${base}/images/vdp_05.jpg`, Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -19,10 +21,10 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/images/vdp_05.jpg" />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

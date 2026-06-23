@@ -1,47 +1,50 @@
 ---
 import Base from "../layouts/Base.astro";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (name: string) => `${base}/images/${name}`;
+
 const pillars = [
   {
     n: "01",
     title: "World-class fishing",
     body: "Marlin, sailfish, kingfish and tuna run the Bazaruto channel — and it starts off your own beach, on our own catamarans. Your skipper knows the water and the season. You just hold on.",
-    img: "/images/vdp_02.jpg", // TODO: replace with a real fishing/charter photo (re-shoot — see docs/05)
+    img: img("vdp_02.jpg"), // TODO: replace with a real fishing/charter photo (re-shoot — see docs/05)
     alt: "Coastline and palms at Vila do Paraíso",
   },
   {
     n: "02",
     title: "World-class snorkelling & diving",
     body: "Two Mile Reef and two hundred kinds of blue. Coral gardens, turtles, and — in season — whale sharks and humpbacks moving through the archipelago. Easy reefs for the kids, deeper walls for the brave.",
-    img: "/images/o_pool.jpg", // TODO: replace with a real reef/underwater photo (re-shoot — see docs/05)
+    img: img("o_pool.jpg"), // TODO: replace with a real reef/underwater photo (re-shoot — see docs/05)
     alt: "Clear blue water at the villa",
   },
   {
     n: "03",
     title: "The ultimate family holiday",
     body: "One villa. Your whole tribe. Four bedrooms, a private pool, a safe warm sea — and nobody cooking, cleaning or planning. The kids run barefoot. The grown-ups exhale.",
-    img: "/images/vdp_04.jpg",
+    img: img("vdp_04.jpg"),
     alt: "Airy villa bedroom opening to the deck",
   },
   {
     n: "04",
     title: "One hour from Johannesburg",
     body: "Leave home after breakfast, watch the sunset with sand on your feet. A one-hour flight to Vilanculos, ten minutes to the gate. Barefoot, not far.",
-    img: "/images/o_villa1_main.jpg",
+    img: img("o_villa1_main.jpg"),
     alt: "Thatched beachfront villa with deck",
   },
   {
     n: "05",
     title: "Butler & chef included",
     body: "Every villa comes with its own butler and chef. Beds made, fish grilled, sundowners poured, tomorrow already planned. The luxury here isn't gold taps — it's not having to think about a thing.",
-    img: "/images/o_butler.jpg",
+    img: img("o_butler.jpg"),
     alt: "Chef Bernardo with fresh-baked bread in the villa",
   },
 ];
 ---
 <Base>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" style={`--hero-bg:url(${img("vdp_05.jpg")})`}>
     <div class="hero-inner">
       <p class="eyebrow">Vilanculos · Mozambique</p>
       <h1>Barefoot luxury on the edge of the Bazaruto.</h1>
@@ -93,7 +96,7 @@ const pillars = [
   </section>
 
   <!-- OPEN DOOR STRIP -->
-  <section class="strip">
+  <section class="strip" style={`--strip-bg:url(${img("o_cocktails.jpg")})`}>
     <div class="wrap">
       <p class="eyebrow">An open door to the Bazaruto</p>
       <h2 class="measure" style="margin-inline:auto;">The whole archipelago, off your own sand.</h2>
@@ -108,7 +111,7 @@ const pillars = [
   <!-- THE TABLE -->
   <section id="table">
     <div class="wrap split reverse">
-      <div class="media"><img src="/images/o_patio.jpg" alt="Shaded dining patio beside a private pool" loading="lazy" /></div>
+      <div class="media"><img src={img("o_patio.jpg")} alt="Shaded dining patio beside a private pool" loading="lazy" /></div>
       <div>
         <p class="eyebrow">The Table — full board, barefoot</p>
         <h2>You don’t lift a finger.</h2>
@@ -130,12 +133,12 @@ const pillars = [
         plunge pool, a deck over the beach, an open-plan kitchen and living, and a butler who
         already knows how you take your coffee.</p>
       <div class="gallery">
-        <img class="wide" src="/images/o_villa1_main.jpg" alt="Beachfront thatched villa" loading="lazy" />
-        <img class="tall" src="/images/o_pool.jpg" alt="Private plunge pool under thatch" loading="lazy" />
-        <img src="/images/vdp_04.jpg" alt="Villa bedroom with mosquito-net bed" loading="lazy" />
-        <img src="/images/vdp_02.jpg" alt="Villa exterior framed by palms" loading="lazy" />
-        <img src="/images/o_bar.jpg" alt="Poolside bar and clubhouse" loading="lazy" />
-        <img src="/images/vdp_03.jpg" alt="Villa entrance through tropical garden" loading="lazy" />
+        <img class="wide" src={img("o_villa1_main.jpg")} alt="Beachfront thatched villa" loading="lazy" />
+        <img class="tall" src={img("o_pool.jpg")} alt="Private plunge pool under thatch" loading="lazy" />
+        <img src={img("vdp_04.jpg")} alt="Villa bedroom with mosquito-net bed" loading="lazy" />
+        <img src={img("vdp_02.jpg")} alt="Villa exterior framed by palms" loading="lazy" />
+        <img src={img("o_bar.jpg")} alt="Poolside bar and clubhouse" loading="lazy" />
+        <img src={img("vdp_03.jpg")} alt="Villa entrance through tropical garden" loading="lazy" />
       </div>
     </div>
   </section>

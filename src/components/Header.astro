@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const nav = [
   { label: "The Villas", href: "#villas" },
   { label: "The Table", href: "#table" },
@@ -7,8 +8,8 @@ const nav = [
 ];
 ---
 <header class="site-header">
-  <a class="brand" href="/" aria-label="Vila do Paraíso home">
-    <img src="/logo-roundel.svg" alt="Vila do Paraíso" width="46" height="46" />
+  <a class="brand" href={`${base}/`} aria-label="Vila do Paraíso home">
+    <img src={`${base}/logo-roundel.svg`} alt="Vila do Paraíso" width="46" height="46" />
     <span>
       <b>Vila do Paraíso</b>
       <small>Moçambique</small>
