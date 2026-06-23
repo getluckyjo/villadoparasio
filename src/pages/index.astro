@@ -1,8 +1,32 @@
 ---
 import Base from "../layouts/Base.astro";
+import { waLink, mailLink } from "../config";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const img = (name: string) => `${base}/images/${name}`;
+
+const wa = waLink();
+const waStay = waLink("Hi Vila do Paraíso, I'd like to enquire about a villa stay — could you send dates and rates?");
+const waEat = waLink("Hi Vila do Paraíso, I'd love to add a private dinner / beach braai to our stay. What's possible?");
+const waDo = waLink("Hi Vila do Paraíso, we'd like to add some experiences — fishing, diving, an island day. Can you help?");
+const email = mailLink();
+
+// Villa gallery — one-line caption per image (read as a gallery, not a contact sheet)
+const gallery = [
+  { src: img("villa-1.webp"), alt: "Sunset over the beach deck and loungers", caption: "Sundowners on the deck", cls: "wide" },
+  { src: img("villa-2.webp"), alt: "Infinity pool over the ocean at golden hour", caption: "The pool, at golden hour", cls: "tall" },
+  { src: img("vdp_04.jpg"), alt: "Villa bedroom with a mosquito-net bed opening to the deck", caption: "Wake to the ocean", cls: "" },
+  { src: img("o_villa1_main.jpg"), alt: "Beachfront thatched villa seen from the lawn", caption: "Your own thatch on the sand", cls: "" },
+  { src: img("o_pool.jpg"), alt: "Private plunge pool under a thatch roof", caption: "A private plunge pool", cls: "" },
+  { src: img("o_patio.jpg"), alt: "Shaded dining patio beside the pool", caption: "Long lunches, shaded", cls: "" },
+];
+
+// PLACEHOLDER pull-quotes — TODO: replace with real verbatim guest reviews (Booking.com 9.3 / TripAdvisor)
+const quotes = [
+  { text: "We didn't lift a finger all week. The chef just knew.", who: "Recent guest · Booking.com" },
+  { text: "The kids lived in the pool and the sea. We finally exhaled.", who: "Family stay · 2025" },
+  { text: "An hour from home and it felt like another world.", who: "Johannesburg traveller" },
+];
 
 const pillars = [
   {
@@ -44,10 +68,13 @@ const pillars = [
       <p>Six private beach villas. Your own butler and chef. A one-hour flight from
         Johannesburg — and a world from everything.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#book">Plan your stay</a>
+        <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Enquire on WhatsApp</a>
         <a class="btn btn-light" href={`${base}/villas`}>See the villas</a>
       </div>
-      <div class="trust">★ <b>9.3 / 10</b> on Booking.com · “Superb”</div>
+      <a class="trust-badge" href="https://www.booking.com/hotel/mz/vila-do-paraiso.html" target="_blank" rel="noopener">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <b>9.3</b><span class="trust-sub">/ 10 · “Superb” on Booking.com</span>
+      </a>
     </div>
   </section>
 
@@ -101,6 +128,22 @@ const pillars = [
     </div>
   </section>
 
+  <!-- PULL QUOTES (placeholder — replace with real guest reviews) -->
+  <section class="quotes">
+    <div class="wrap">
+      <p class="eyebrow" style="text-align:center;">In their words</p>
+      <div class="quote-grid">
+        {quotes.map((q) => (
+          <figure class="quote">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>{q.text}</blockquote>
+            <figcaption>{q.who}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- THE TABLE -->
   <section id="table">
     <div class="wrap split reverse">
@@ -128,12 +171,12 @@ const pillars = [
         already knows how you take your coffee.</p>
       <p style="margin-top:1.2rem;"><a class="btn btn-ghost" href={`${base}/villas`}>See all the villas</a></p>
       <div class="gallery">
-        <img class="wide" src={img("villa-1.webp")} alt="Sunset over the beach deck and loungers" loading="lazy" />
-        <img class="tall" src={img("villa-2.webp")} alt="Infinity pool over the ocean at golden hour" loading="lazy" />
-        <img src={img("vdp_04.jpg")} alt="Villa bedroom with mosquito-net bed" loading="lazy" />
-        <img src={img("o_villa1_main.jpg")} alt="Beachfront thatched villa" loading="lazy" />
-        <img src={img("o_pool.jpg")} alt="Private plunge pool under thatch" loading="lazy" />
-        <img src={img("o_patio.jpg")} alt="Shaded dining patio beside the pool" loading="lazy" />
+        {gallery.map((g) => (
+          <figure class={`gphoto ${g.cls}`}>
+            <img src={g.src} alt={g.alt} loading="lazy" decoding="async" />
+            <figcaption>{g.caption}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>
@@ -158,31 +201,35 @@ const pillars = [
   <section id="book">
     <div class="wrap">
       <p class="eyebrow">Book direct</p>
-      <h2 class="measure">Stay, eat and explore — sorted in a few taps.</h2>
+      <h2 class="measure">Tell us what you're dreaming of. We'll handle the rest.</h2>
+      <p class="measure">One message and a real person plans the whole thing — villa, full board, and every
+        day on the water. No forms, no fuss.</p>
       <div class="book-grid">
         <div class="book-card">
           <span class="tag">Stay</span>
           <h3>Your villa</h3>
-          <p>Pick your dates and your villa. Full board is included — beds, a butler, a chef,
-            and every meal.</p>
-          <p class="note">Booking engine to be connected (Lodgify). See docs/02.</p>
+          <p>Whole-villa privacy, sleeps eight, full board included — beds, a butler, a chef and
+            every meal. Send your dates and we'll come straight back with availability.</p>
+          <a class="card-link" href={waStay} target="_blank" rel="noopener">Check your dates →</a>
         </div>
         <div class="book-card">
           <span class="tag">Eat</span>
           <h3>Make a night special</h3>
-          <p>Add a private dinner on the dunes or a beach braai under the stars to any stay.</p>
-          <p class="note">Dining add-ons via the stay booking.</p>
+          <p>A private dinner on the dunes, a beach braai under the stars, the day's whole catch.
+            Tell us the occasion and we'll set the scene.</p>
+          <a class="card-link" href={waEat} target="_blank" rel="noopener">Ask about dining →</a>
         </div>
         <div class="book-card">
           <span class="tag">Do</span>
           <h3>On the water</h3>
-          <p>Add fishing, diving, snorkelling, island hops and dune picnics — on our own boats.</p>
-          <p class="note">Activities engine to be connected (FareHarbor). See docs/02.</p>
+          <p>Fishing, diving, snorkelling, island hops and dune picnics — on our own boats. We'll
+            line them up so it's all ready when you land.</p>
+          <a class="card-link" href={waDo} target="_blank" rel="noopener">Plan experiences →</a>
         </div>
       </div>
       <div class="hero-cta" style="margin-top:2rem;">
-        <a class="btn btn-primary" href="https://wa.me/">Enquire on WhatsApp</a>
-        <a class="btn btn-ghost" href="mailto:stay@viladoparaiso.com">Email us</a>
+        <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        <a class="btn btn-ghost" href={email}>Email us</a>
       </div>
     </div>
   </section>

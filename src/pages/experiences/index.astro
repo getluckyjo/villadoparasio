@@ -2,8 +2,10 @@
 import Base from "../../layouts/Base.astro";
 import PageHero from "../../components/PageHero.astro";
 
+import { waLink } from "../../config";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const img = (n: string) => `${base}/images/${n}`;
+const wa = waLink("Hi Vila do Paraíso, we'd like to plan some experiences during our stay.");
 
 const experiences = [
   { title: "World-class fishing", body: "Marlin, sailfish, tuna and GTs in the Bazaruto channel — on our own catamarans.", img: "wa-1.jpeg", href: `${base}/experiences/fishing`, alt: "Guests with the day's catch beside the catamaran" },
@@ -34,8 +36,8 @@ const experiences = [
         ))}
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href={`${base}/#book`}>Book your experiences</a>
-        <a class="btn btn-ghost" href="https://wa.me/">Ask us on WhatsApp</a>
+        <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        <a class="btn btn-ghost" href={`${base}/#book`}>All ways to book</a>
       </div>
     </div>
   </section>

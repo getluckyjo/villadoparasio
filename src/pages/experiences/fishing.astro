@@ -2,8 +2,10 @@
 import Base from "../../layouts/Base.astro";
 import PageHero from "../../components/PageHero.astro";
 
+import { waLink } from "../../config";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const img = (n: string) => `${base}/images/${n}`;
+const waFish = waLink("Hi Vila do Paraíso, I'd like to plan some fishing — what's running and what are the options?");
 
 const species = [
   { k: "Late Aug – April · peak Sep–Dec", t: "Black marlin", d: "The headline fish. Averages 400–500 lb, with giants over 800 lb. The all-African record — 1,298 lb — was set right off Bazaruto." },
@@ -70,8 +72,8 @@ const species = [
         <li>Half-day and full-day charters; the chef cooks your catch back at the villa</li>
       </ul>
       <div class="cta-row">
-        <a class="btn btn-primary" href={`${base}/#book`}>Book a charter</a>
-        <a class="btn btn-ghost" href="https://wa.me/">Ask about the season</a>
+        <a class="btn btn-primary" href={waFish} target="_blank" rel="noopener">Book a charter on WhatsApp</a>
+        <a class="btn btn-ghost" href={`${base}/#book`}>All ways to book</a>
       </div>
     </div>
   </section>

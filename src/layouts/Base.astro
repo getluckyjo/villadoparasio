@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { waLink } from "../config";
+const wa = waLink();
 
 interface Props {
   title?: string;
@@ -39,6 +41,28 @@ const ogImage = new URL(`${base}/images/vdp_05.jpg`, Astro.site).href;
       <slot />
     </main>
     <Footer />
-    <a class="wa" href="https://wa.me/" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+
+    <!-- Scroll-triggered sticky enquiry bar (mobile-first) -->
+    <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+      <span>Plan your stay</span>
+      <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Enquire on WhatsApp</a>
+    </div>
+
+    <a class="wa" href={wa} target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+      <span aria-hidden="true">💬</span> WhatsApp
+    </a>
+
+    <script>
+      const bar = document.getElementById("stickyCta");
+      if (bar) {
+        const onScroll = () => {
+          const show = window.scrollY > window.innerHeight * 0.6;
+          bar.classList.toggle("is-visible", show);
+          bar.setAttribute("aria-hidden", show ? "false" : "true");
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      }
+    </script>
   </body>
 </html>

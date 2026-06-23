@@ -1,9 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
 import PageHero from "../components/PageHero.astro";
+import { waLink, mailLink } from "../config";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const img = (n: string) => `${base}/images/${n}`;
+const waDine = waLink("Hi Vila do Paraíso, we'd love to plan a special dinner during our stay. What can you set up?");
 
 const meals = [
   { k: "Breakfast", t: "Slow mornings", d: "Fruit, eggs any way, fresh bread and good coffee — whenever you surface." },
@@ -22,7 +24,7 @@ const meals = [
 
   <section>
     <div class="wrap split">
-      <div class="media"><img src={img("o_butler.jpg")} alt="Chef Bernardo with fresh-baked bread" loading="lazy" /></div>
+      <div class="media"><img src={img("seafood-feast.jpg")} alt="A Mozambican seafood feast — grilled fish, clams, olives and bread" loading="lazy" decoding="async" /></div>
       <div>
         <p class="eyebrow">Your chef</p>
         <h2>Honest food, of this place.</h2>
@@ -82,8 +84,8 @@ const meals = [
           <li>Sundowners and cocktails wherever the light is best</li>
         </ul>
         <div class="cta-row">
-          <a class="btn btn-primary" href={`${base}/#book`}>Plan your stay</a>
-          <a class="btn btn-ghost" href="https://wa.me/">Ask us on WhatsApp</a>
+          <a class="btn btn-primary" href={waDine} target="_blank" rel="noopener">Enquire on WhatsApp</a>
+          <a class="btn btn-ghost" href={mailLink()}>Email us</a>
         </div>
       </div>
     </div>
