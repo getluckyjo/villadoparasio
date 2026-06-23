@@ -8,6 +8,7 @@
   --ink: #3e3432;        /* Palm Charcoal — primary text & line */
   --sun: #fac926;        /* Sun Gold — hero warm accent */
   --aqua: #c0e8f0;       /* Sky Aqua — soft tint / ocean */
+  --sky: #2f86a8;        /* readable light blue for link hovers */
 
   /* neutrals */
   --shell: #f6f1e7;
@@ -70,7 +71,7 @@ h3 { font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.6rem); }
 
 p { margin: 0 0 1rem; }
 a { color: var(--tide); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { color: var(--sky); text-decoration: underline; }
 
 .eyebrow {
   font-family: var(--font-body);
@@ -101,11 +102,14 @@ section { padding-block: clamp(3.5rem, 2rem + 6vw, 7rem); }
 }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
 .btn-primary { background: var(--sunset); color: #fff; }
-.btn-primary:hover { background: var(--amber); color: var(--ink); }
+.btn-primary:hover { background: var(--aqua); color: var(--ink); }
 .btn-ghost { background: transparent; border-color: currentColor; color: var(--ink); }
-.btn-ghost:hover { background: var(--ink); color: var(--shell); }
+.btn-ghost:hover { background: var(--aqua); color: var(--ink); border-color: var(--aqua); }
 .btn-light { background: rgba(255,255,255,0.16); color: #fff; border-color: rgba(255,255,255,0.6); backdrop-filter: blur(4px); }
-.btn-light:hover { background: #fff; color: var(--ink); }
+.btn-light:hover { background: var(--aqua); color: var(--ink); border-color: var(--aqua); }
+/* keep button labels white even inside nav (overrides .nav a colour) */
+.nav a.btn-primary { color: #fff; }
+.nav a.btn-primary:hover { color: var(--ink); }
 
 /* ---- header ---- */
 .site-header {
@@ -127,7 +131,7 @@ section { padding-block: clamp(3.5rem, 2rem + 6vw, 7rem); }
 .brand small { display: block; font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.3em; color: var(--clay); text-transform: uppercase; }
 .nav { display: flex; align-items: center; gap: 1.6rem; }
 .nav a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
-.nav a:hover { color: var(--sunset); text-decoration: none; }
+.nav a:hover { color: var(--sky); text-decoration: none; }
 .nav .btn { padding: 0.6rem 1.2rem; }
 @media (max-width: 860px) {
   .nav a:not(.btn) { display: none; }
@@ -210,7 +214,7 @@ section { padding-block: clamp(3.5rem, 2rem + 6vw, 7rem); }
 .site-footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
 .site-footer h4 { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.75rem; color: var(--sun); margin: 0 0 0.9rem; }
 .site-footer a { color: rgba(255,255,255,0.82); }
-.site-footer a:hover { color: #fff; }
+.site-footer a:hover { color: var(--aqua); }
 .site-footer .brand b { color: #fff; }
 .site-footer .brand small { color: rgba(255,255,255,0.6); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); margin-top: 2.5rem; padding-top: 1.4rem; font-size: 0.82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
