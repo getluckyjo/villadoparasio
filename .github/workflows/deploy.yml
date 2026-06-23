@@ -34,6 +34,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          SITE_BASE: /villadoparasio
+          SITE_URL: https://getluckyjo.github.io
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

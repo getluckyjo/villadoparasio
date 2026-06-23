@@ -1,10 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Deployed to GitHub Pages as a project site at /villadoparasio/.
-// For a future custom domain (e.g. viladoparaiso.com) set `base: '/'`.
+// Base + site are env-driven so the same code deploys cleanly to either:
+//   • Netlify / Vercel / custom domain  → root, base "/" (default)
+//   • GitHub Pages project site         → SITE_BASE=/villadoparasio
 // https://astro.build/config
-export default defineConfig({
-  site: 'https://getluckyjo.github.io',
-  base: '/villadoparasio',
-});
+const base = process.env.SITE_BASE || '/';
+const site = process.env.SITE_URL || 'https://viladoparaiso.com';
+
+export default defineConfig({ site, base });
