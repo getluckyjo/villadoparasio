@@ -32,6 +32,16 @@ these are clear to use, unlike scraped OTA images) plus the logo. Inventory (`/i
 > as the working set; the shot-list in Section 3 still stands for a hero re-shoot. When we
 > scaffold the site I can import a curated subset into `/public/images` and grade them to one look.
 
+### Newer additions (June 2026) — now live on the homepage
+The owner added higher-impact shots that **resolve the earlier activity-image gaps**:
+- **`wa-1.jpeg`** — real fishing catch with guests + the catamaran → **Fishing** pillar
+- **`two-mile-reef.jpg`** — coral garden & reef fish → **Diving & snorkelling** pillar
+- **`boat-1.webp` / `boat-2.webp`** — the catamarans (incl. an aerial of both off the beach) → **"open door to the Bazaruto"** strip
+- **`villa-1.webp` / `villa-2.webp`** — golden-hour beach deck and the infinity pool → **villas gallery**
+
+> The placeholder fishing/diving images flagged earlier are now replaced with the real thing.
+> Remaining nice-to-haves for a hero re-shoot: island-hopping / dune-picnic / township-tour.
+
 ## 1. Where the property's own images live (collect / verify rights)
 
 These pages host real photos of Vila do Paraíso. Pull them together, confirm which the owners
