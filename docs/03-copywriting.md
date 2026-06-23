@@ -81,7 +81,7 @@ Johannesburg — and a world from everything.
 > season. You just hold on.
 > `Explore the fishing →`
 
-**2 · World-class snorkelling & diving**
+**2 · Crystal-clear snorkelling & diving**
 > Two Mile Reef and two hundred kinds of blue. Coral gardens, turtles, and — in season —
 > whale sharks and humpbacks moving through the archipelago. Warm water, easy reefs for the
 > kids, deeper walls for the brave.
