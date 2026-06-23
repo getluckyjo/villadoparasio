@@ -58,8 +58,8 @@ indulgent, pamper, nestled, oasis, "a stay to remember," "home away from home."
 ### Hero
 **Eyebrow:** Vilanculos · Mozambique
 **Headline:** **Barefoot luxury on the edge of the Bazaruto.**
-**Sub:** Six private beach villas. Your own butler and chef. One hour from Johannesburg —
-and a world from everything.
+**Sub:** Six private beach villas. Your own butler and chef. A one-hour flight from
+Johannesburg — and a world from everything.
 **CTA buttons:** `Plan your stay` · `See the villas`
 **Trust line (small, under CTAs):** *9.3 / 10 on Booking.com · "Superb"*
 
@@ -118,7 +118,8 @@ and a world from everything.
 
 ## 4. The Villas page
 
-**Headline:** Six villas. One ocean. All yours.
+**Headline:** A whole beach house, just for your people.
+*(Homepage villas section uses this same line.)*
 **Intro:**
 > Each villa is yours alone — four en-suite bedrooms, an open-plan kitchen and living that
 > spills onto a deck above the beach, and a private pool to fall into when the day gets warm.
