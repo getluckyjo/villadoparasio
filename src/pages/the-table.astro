@@ -1,0 +1,76 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (n: string) => `${base}/images/${n}`;
+
+const meals = [
+  { k: "Breakfast", t: "Slow mornings", d: "Fruit, eggs any way, fresh bread and good coffee — whenever you surface." },
+  { k: "Lunch", t: "Light and barefoot", d: "Grilled catch of the day, salads and cold drinks by the pool." },
+  { k: "Dinner", t: "The day's best", d: "Seafood, Mozambican classics, and a braai on the sand if you fancy it." },
+  { k: "Sundowners", t: "The local ritual", d: "A cold 2M, the sky on fire, and somebody else clearing up." },
+];
+---
+<Base title="The Table — full board at Vila do Paraíso" description="Full board, barefoot. Your own chef cooks fresh-caught seafood, Mozambican classics and tropical fruit — on the deck, on the beach, under the stars. No shopping, no cooking, no dishes.">
+  <PageHero
+    eyebrow="The Table — full board, barefoot"
+    title="You don't lift a finger."
+    sub="No shopping, no cooking, no dishes, no 'what's for dinner.' Just tell Chef what your people love, and it appears."
+    image="vdp_05.jpg"
+  />
+
+  <section>
+    <div class="wrap split">
+      <div class="media"><img src={img("o_butler.jpg")} alt="Chef Bernardo with fresh-baked bread" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Your chef</p>
+        <h2>Honest food, of this place.</h2>
+        <p>Fish landed that morning. Peri-peri prawns. Matapa and coconut rice. Tropical fruit cut
+          at breakfast, and bread still warm from the oven. Our chef cooks around you and your
+          family — tell us what you love, what the kids will eat, what you can't have — and it's
+          handled.</p>
+        <p>Full board is included in your stay, at a price that makes sense: not an island bill,
+          just very good food where you happen to be sitting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap">
+      <p class="eyebrow">A day at the table</p>
+      <h2 class="measure">From first coffee to the last cold one.</h2>
+      <div class="info-grid">
+        {meals.map((m) => (
+          <div class="info-card">
+            <span class="k">{m.k}</span>
+            <h4>{m.t}</h4>
+            <p>{m.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split reverse">
+      <div class="media"><img src={img("o_cocktails.jpg")} alt="Cocktails by the pool at sunset" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Make a night of it</p>
+        <h2>Dining moments, on request.</h2>
+        <p>Some evenings ask for more than a table. Add one of these to any stay and we'll set the
+          whole thing up — you just turn up barefoot.</p>
+        <ul class="checklist">
+          <li>A private dinner set up on the dunes</li>
+          <li>A beach braai under the stars</li>
+          <li>A seafood feast — the day's whole catch</li>
+          <li>Sundowners and cocktails wherever the light is best</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href={`${base}/#book`}>Plan your stay</a>
+          <a class="btn btn-ghost" href="https://wa.me/">Ask us on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

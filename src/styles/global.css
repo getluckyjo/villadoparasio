@@ -220,6 +220,32 @@ section { padding-block: clamp(3.5rem, 2rem + 6vw, 7rem); }
 .wa { position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 60; background: #25d366; color: #fff; border-radius: 999px; padding: 0.8rem 1.2rem; font-weight: 600; box-shadow: var(--shadow); display: inline-flex; align-items: center; gap: 0.5rem; }
 .wa:hover { text-decoration: none; transform: translateY(-2px); }
 
+/* ---- inner page hero ---- */
+.page-hero { position: relative; min-height: 60vh; display: flex; align-items: flex-end; color: #fff; padding: var(--gutter); overflow: hidden; }
+.page-hero::before { content: ""; position: absolute; inset: 0; background: var(--ph-bg) center/cover no-repeat; transform: scale(1.04); }
+.page-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,58,76,0.2) 0%, rgba(62,52,50,0) 40%, rgba(62,52,50,0.74) 100%); }
+.page-hero .wrap { position: relative; z-index: 2; padding-bottom: 1.5rem; }
+.page-hero h1 { color: #fff; max-width: 18ch; text-shadow: 0 2px 26px rgba(0,0,0,0.35); }
+.page-hero .eyebrow { color: rgba(255,255,255,0.85); }
+.page-hero p { color: rgba(255,255,255,0.95); max-width: 52ch; }
+
+/* ---- checklist (star bullets) ---- */
+.checklist { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; gap: 0.6rem; }
+.checklist li { position: relative; padding-left: 1.7rem; color: #5b5048; }
+.checklist li::before { content: "✦"; position: absolute; left: 0; top: 0.05em; color: var(--sun); }
+
+/* ---- info cards (species / seasons / practical) ---- */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.1rem; margin-top: 1.8rem; }
+.info-card { background: var(--shell); border: 1px solid var(--driftwood); border-radius: var(--radius); padding: 1.2rem 1.3rem; }
+.info-card h4 { font-family: var(--font-display); font-weight: 500; margin: 0 0 0.35rem; color: var(--ink); font-size: 1.15rem; }
+.info-card p { margin: 0; color: #5b5048; font-size: 0.96rem; }
+.info-card .k { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--clay); margin-bottom: 0.5rem; }
+
+/* ---- experience cross-links ---- */
+.xlinks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; margin-top: 2.2rem; }
+.back-link { display: inline-block; margin-bottom: 0.4rem; font-size: 0.85rem; letter-spacing: 0.04em; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.8rem; }
+
 /* small star divider */
 .star-rule { display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--driftwood); margin: 0; }
 .star-rule::before, .star-rule::after { content: ""; height: 1px; width: min(28vw, 180px); background: var(--driftwood); }

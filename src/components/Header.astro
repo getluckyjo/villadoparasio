@@ -1,10 +1,10 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const nav = [
-  { label: "The Villas", href: "#villas" },
-  { label: "The Table", href: "#table" },
-  { label: "Experiences", href: "#experiences" },
-  { label: "Getting Here", href: "#getting-here" },
+  { label: "The Villas", href: `${base}/villas` },
+  { label: "The Table", href: `${base}/the-table` },
+  { label: "Experiences", href: `${base}/experiences` },
+  { label: "Getting Here", href: `${base}/#getting-here` },
 ];
 ---
 <header class="site-header">
@@ -13,6 +13,6 @@ const nav = [
   </a>
   <nav class="nav" aria-label="Primary">
     {nav.map((n) => <a href={n.href}>{n.label}</a>)}
-    <a class="btn btn-primary" href="#book">Book</a>
+    <a class="btn btn-primary" href={`${base}/#book`}>Book</a>
   </nav>
 </header>

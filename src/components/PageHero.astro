@@ -1,0 +1,12 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const { eyebrow, title, sub, image } = Astro.props;
+const bg = `${base}/images/${image}`;
+---
+<section class="page-hero" style={`--ph-bg:url(${bg})`}>
+  <div class="wrap">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {sub && <p class="lede measure">{sub}</p>}
+  </div>
+</section>

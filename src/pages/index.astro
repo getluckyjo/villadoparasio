@@ -45,7 +45,7 @@ const pillars = [
         Johannesburg — and a world from everything.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#book">Plan your stay</a>
-        <a class="btn btn-light" href="#villas">See the villas</a>
+        <a class="btn btn-light" href={`${base}/villas`}>See the villas</a>
       </div>
       <div class="trust">★ <b>9.3 / 10</b> on Booking.com · “Superb”</div>
     </div>
@@ -97,7 +97,7 @@ const pillars = [
         Island-hop by dhow or catamaran, picnic on the dunes, snorkel a reef that belongs in a
         documentary, and be home for sundowners on your deck.
       </p>
-      <a class="btn btn-light" href="#book" style="margin-top:1rem;">See the experiences</a>
+      <a class="btn btn-light" href={`${base}/experiences`} style="margin-top:1rem;">See the experiences</a>
     </div>
   </section>
 
@@ -113,6 +113,7 @@ const pillars = [
         <p>The food is honest and of this place: fish landed that morning, peri-peri prawns,
           matapa and coconut rice, tropical fruit at breakfast, and a cold 2M as the sun goes
           down. Full board, included, at a price that makes sense — not an island bill.</p>
+        <a class="btn btn-ghost" href={`${base}/the-table`}>More about the table</a>
       </div>
     </div>
   </section>
@@ -125,6 +126,7 @@ const pillars = [
       <p class="measure">Four en-suite, air-conditioned bedrooms — sleeps up to eight. A private
         plunge pool, a deck over the beach, an open-plan kitchen and living, and a butler who
         already knows how you take your coffee.</p>
+      <p style="margin-top:1.2rem;"><a class="btn btn-ghost" href={`${base}/villas`}>See all the villas</a></p>
       <div class="gallery">
         <img class="wide" src={img("villa-1.webp")} alt="Sunset over the beach deck and loungers" loading="lazy" />
         <img class="tall" src={img("villa-2.webp")} alt="Infinity pool over the ocean at golden hour" loading="lazy" />

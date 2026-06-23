@@ -1,0 +1,78 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (n: string) => `${base}/images/${n}`;
+
+const species = [
+  { k: "Late Aug – April · peak Sep–Dec", t: "Black marlin", d: "The headline fish. Averages 400–500 lb, with giants over 800 lb. The all-African record — 1,298 lb — was set right off Bazaruto." },
+  { k: "October – May", t: "Blue marlin", d: "Summer's hidden giants, up to 700 lb, with good fish even in the cooler June–July water in recent seasons." },
+  { k: "May – September", t: "Sailfish", d: "Acrobatic and fast, peaking in the winter months — and a regular marlin by-catch in summer." },
+  { k: "Year-round", t: "Tuna, wahoo & GTs", d: "Yellowfin tuna, wahoo and giant trevally keep the action nonstop between the billfish." },
+];
+---
+<Base title="World-class fishing — Vila do Paraíso, Bazaruto" description="Marlin, sailfish, tuna, wahoo and GTs in the Bazaruto channel — one of the great game-fishing grounds on earth, fished from Vila do Paraíso's own catamarans. Black marlin late Aug–April, blue marlin Oct–May, sailfish May–Sep.">
+  <PageHero
+    eyebrow="Experiences · Fishing"
+    title="Marlin weather, off your own beach."
+    sub="The Bazaruto channel is one of the great game-fishing grounds on earth — and it starts off your own sand, on our own catamarans."
+    image="boat-1.webp"
+  />
+
+  <section>
+    <div class="wrap split">
+      <div class="media"><img src={img("wa-1.jpeg")} alt="Guests with the day's catch beside the Vila do Paraíso catamaran" loading="lazy" /></div>
+      <div>
+        <a class="back-link" href={`${base}/experiences`}>← All experiences</a>
+        <p class="eyebrow">The fishery</p>
+        <h2>Serious water, a short run out.</h2>
+        <p>The deep channel between the mainland and the Bazaruto islands funnels billfish past
+          your doorstep. This is genuine big-game country: the <strong>all-African black marlin
+          record of 1,298 lb</strong> was set off the northern point of Bazaruto. You don't need a
+          long steam to find fish — the grounds are close, the skippers are local, and the boats
+          are ours.</p>
+        <p>Go heavy-tackle for marlin, light-tackle and popping for tuna and GTs, fly if that's
+          your thing, or bottom-fish for the braai. Whatever you're chasing, the crew knows where
+          the water's working.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap">
+      <p class="eyebrow">What's running, and when</p>
+      <h2 class="measure">A fishing calendar.</h2>
+      <p class="measure">It fishes hard all year; this is roughly what's biting through the
+        seasons. Tell us what you're after and we'll aim your trip at it.</p>
+      <div class="info-grid">
+        {species.map((s) => (
+          <div class="info-card">
+            <span class="k">{s.k}</span>
+            <h4>{s.t}</h4>
+            <p>{s.d}</p>
+          </div>
+        ))}
+      </div>
+      <p class="note" style="margin-top:1.5rem;">Seasons and species reflect the Bazaruto fishery
+        generally; conditions vary year to year.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">On the water</p>
+      <h2 class="measure">Our boats, our crew.</h2>
+      <ul class="checklist measure">
+        <li>Two catamarans run from the beach — fishing and island trips both</li>
+        <li>Local skippers who know the channel and the seasons</li>
+        <li>Heavy tackle, light tackle, fly, popping, jigging and bottom fishing</li>
+        <li>Half-day and full-day charters; the chef cooks your catch back at the villa</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={`${base}/#book`}>Book a charter</a>
+        <a class="btn btn-ghost" href="https://wa.me/">Ask about the season</a>
+      </div>
+    </div>
+  </section>
+</Base>
