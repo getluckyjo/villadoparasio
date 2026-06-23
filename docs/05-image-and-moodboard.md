@@ -15,6 +15,23 @@ web. Here's the honest, useful version of that: **where the real photography liv
 
 ---
 
+## 0. Owner's photo library (in Google Drive) — usable now ✅
+
+The owner's Drive folder **"Villa do Paraiso"** contains an **owner-held photo library** (so
+these are clear to use, unlike scraped OTA images) plus the logo. Inventory (`/images`):
+
+- **Villas & rooms:** `o_villa1_main`, `o_villa2_main`, `o_villa3_main`, `o_villa5_balcony`,
+  `vdp_room`, `vdp_lounge`, `o_patio`, `vdp_01`–`vdp_05`, `vdp_09`, `vdp_10`, `vdp_12`
+- **Pool & grounds:** `o_pool`, `o_35`, `o_41`, `o_42`
+- **Food & service:** `o_bar`, `o_cocktails`, `o_butler`, `o_beachlodge`
+- **Carousel/misc:** `u_carosel7`, `u_carosel17`
+- **Logo:** `VDP-LOGO-.jpg` → now in the repo as `/assets/brand/VDP-LOGO.jpg`
+
+> **Quality note:** these are mostly **web-resolution** JPGs (tens-to-hundreds of KB) — fine for
+> a Phase-1 launch and proof of the real place, but **below ideal hero resolution**. Treat them
+> as the working set; the shot-list in Section 3 still stands for a hero re-shoot. When we
+> scaffold the site I can import a curated subset into `/public/images` and grade them to one look.
+
 ## 1. Where the property's own images live (collect / verify rights)
 
 These pages host real photos of Vila do Paraíso. Pull them together, confirm which the owners

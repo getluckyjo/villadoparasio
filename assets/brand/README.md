@@ -9,20 +9,21 @@ The existing logo is a **badge**: two palm silhouettes, a golden rising sun, a p
 dome, beach grass and three birds, over a hand-drawn banner reading **VILA DO PARAISO** /
 **MOÇAMBIQUE**.
 
-**Extracted brand colours** (confirm exact values from the vector master):
+**Brand colours** — sampled directly from `VDP-LOGO.jpg` (source of truth):
 
-| Name | Hex (approx) | Where |
+| Name | Hex | Where |
 |---|---|---|
-| Palm Charcoal | `#38322A` | palms, lettering, line work |
-| Sun Gold | `#F4B82A` | the sun |
-| Sky Aqua | `#BFE3EC` | the sky dome (→ white gradient) |
+| Palm Charcoal | `#3E3432` | palms, lettering, line work |
+| Sun Gold | `#FAC926` | the sun |
+| Sky Aqua | `#C0E8F0` | the sky dome (→ white gradient) |
 
 ## Files to add
 
 | File | Why | Status |
 |---|---|---|
-| `logo-master.ai` / `.svg` / `.pdf` | **Official** vector master of the full badge — scales for web & print | ⏳ needed from owner |
-| `logo-full-colour.png` | Transparent, high-res primary badge (the version shared in chat) | ⏳ needed from owner |
+| `VDP-LOGO.jpg` | Official full badge (raster, white bg) — from the owner's Drive | ✅ **in repo** |
+| `logo-master.ai` / `.svg` / `.pdf` | **Official vector** master — scales for web & print | ⏳ still needed (raster only so far) |
+| `logo-transparent.png` | Transparent-background version of the badge | ⏳ to create from vector |
 | `logo-reverse-white.png/svg` | Single-colour white knockout for the dark footer & over photos | ⏳ to create from master |
 | `logo-roundel.svg` / `.png` | Simplified palm-and-sun mark for header / avatar | ✅ **draft in repo** (interpretive) |
 | `favicon.svg` + `favicon-32/180/512.png` | Browser tab + Apple touch + PWA icon | ✅ **draft in repo** (interpretive) |

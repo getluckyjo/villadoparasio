@@ -34,17 +34,17 @@ warm accent.**
 The existing **Vila do Paraíso logo** sets three non-negotiable brand colours. The web
 palette below is built to *harmonise* with these, not fight them:
 
-| Token | Name | Hex (approx — confirm from vector) | In the logo |
+| Token | Name | Hex (sampled from the official logo) | In the logo |
 |---|---|---|---|
-| `--ink` | Palm Charcoal | `#38322A` | Palms, lettering, all line work — warm near-black |
-| `--sun` | Sun Gold | `#F4B82A` | The rising sun |
-| `--aqua` | Sky Aqua | `#BFE3EC` | The sky dome (pale, gradient to white) |
+| `--ink` | Palm Charcoal | `#3E3432` | Palms, lettering, all line work — warm near-black |
+| `--sun` | Sun Gold | `#FAC926` | The rising sun |
+| `--aqua` | Sky Aqua | `#C0E8F0` | The sky dome (pale, gradient to white) |
 
 > Use **Palm Charcoal `--ink`** as the primary text/line colour everywhere (it matches the
 > logo exactly and reads warmer than a cold black). **Sun Gold** is the brand's hero warm
 > accent — it ties the 2M "sunset" idea straight to the logo's sun. **Sky Aqua** is a soft
-> tint for backgrounds, the ocean, and hover states. Confirm exact hex values once we have
-> the vector file.
+> tint for backgrounds, the ocean, and hover states. These three are sampled directly from the
+> official logo file (`/assets/brand/VDP-LOGO.jpg`) and are the source of truth.
 
 ### Neutrals — the canvas (use most)
 | Token | Name | Hex | Use |
@@ -57,7 +57,7 @@ palette below is built to *harmonise* with these, not fight them:
 ### Deep — the ocean & ink (anchor & text)
 | Token | Name | Hex | Use |
 |---|---|---|---|
-| `--ink` | Palm Charcoal | `#38322A` | **Primary text & line colour** (matches the logo) |
+| `--ink` | Palm Charcoal | `#3E3432` | **Primary text & line colour** (matches the logo) |
 | `--indigo` | Dhow Indigo | `#1E3A4C` | Deep-ocean backgrounds, footer, dark sections |
 | `--tide` | Tidewater Teal | `#2E6E66` | Secondary deep, links, calm accent |
 | `--palm` | Casuarina Green | `#4A5D3A` | Natural/eco accent, subtle |
@@ -65,7 +65,7 @@ palette below is built to *harmonise* with these, not fight them:
 ### Warm accent — the sun & the 2M flash (use sparingly, 5%)
 | Token | Name | Hex | Use |
 |---|---|---|---|
-| `--sun` | Sun Gold *(logo)* | `#F4B82A` | Hero warm accent — the logo's sun, highlights, hover |
+| `--sun` | Sun Gold *(logo)* | `#FAC926` | Hero warm accent — the logo's sun, highlights, hover |
 | `--sunset` | 2M Sunset Red | `#C0392B` | Primary CTA, the star mark, moments of joy |
 | `--amber` | Mukwa Amber | `#C9962E` | Deeper gold companion to Sun Gold, gradients |
 | `--coral` | Capulana Coral | `#E2725B` | Soft warm accent, illustration, tags |
@@ -237,10 +237,10 @@ simple. So nature shines.
 
 ```css
 :root {
-  /* brand — from the logo (source of truth) */
-  --ink:       #38322A; /* Palm Charcoal — primary text & line colour */
-  --sun:       #F4B82A; /* Sun Gold — hero warm accent */
-  --aqua:      #BFE3EC; /* Sky Aqua — soft tint / ocean */
+  /* brand — sampled from the official logo (source of truth) */
+  --ink:       #3E3432; /* Palm Charcoal — primary text & line colour */
+  --sun:       #FAC926; /* Sun Gold — hero warm accent */
+  --aqua:      #C0E8F0; /* Sky Aqua — soft tint / ocean */
   /* neutrals */
   --shell:     #F6F1E7;
   --sand:      #E7DAC4;
