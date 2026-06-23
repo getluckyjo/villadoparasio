@@ -1,0 +1,21 @@
+---
+const nav = [
+  { label: "The Villas", href: "#villas" },
+  { label: "The Table", href: "#table" },
+  { label: "Experiences", href: "#experiences" },
+  { label: "Getting Here", href: "#getting-here" },
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Vila do Paraíso home">
+    <img src="/logo-roundel.svg" alt="Vila do Paraíso" width="46" height="46" />
+    <span>
+      <b>Vila do Paraíso</b>
+      <small>Moçambique</small>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+    <a class="btn btn-primary" href="#book">Book</a>
+  </nav>
+</header>

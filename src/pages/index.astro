@@ -1,0 +1,188 @@
+---
+import Base from "../layouts/Base.astro";
+
+const pillars = [
+  {
+    n: "01",
+    title: "World-class fishing",
+    body: "Marlin, sailfish, kingfish and tuna run the Bazaruto channel — and it starts off your own beach, on our own catamarans. Your skipper knows the water and the season. You just hold on.",
+    img: "/images/vdp_02.jpg", // TODO: replace with a real fishing/charter photo (re-shoot — see docs/05)
+    alt: "Coastline and palms at Vila do Paraíso",
+  },
+  {
+    n: "02",
+    title: "World-class snorkelling & diving",
+    body: "Two Mile Reef and two hundred kinds of blue. Coral gardens, turtles, and — in season — whale sharks and humpbacks moving through the archipelago. Easy reefs for the kids, deeper walls for the brave.",
+    img: "/images/o_pool.jpg", // TODO: replace with a real reef/underwater photo (re-shoot — see docs/05)
+    alt: "Clear blue water at the villa",
+  },
+  {
+    n: "03",
+    title: "The ultimate family holiday",
+    body: "One villa. Your whole tribe. Four bedrooms, a private pool, a safe warm sea — and nobody cooking, cleaning or planning. The kids run barefoot. The grown-ups exhale.",
+    img: "/images/vdp_04.jpg",
+    alt: "Airy villa bedroom opening to the deck",
+  },
+  {
+    n: "04",
+    title: "One hour from Johannesburg",
+    body: "Leave home after breakfast, watch the sunset with sand on your feet. A one-hour flight to Vilanculos, ten minutes to the gate. Barefoot, not far.",
+    img: "/images/o_villa1_main.jpg",
+    alt: "Thatched beachfront villa with deck",
+  },
+  {
+    n: "05",
+    title: "Butler & chef included",
+    body: "Every villa comes with its own butler and chef. Beds made, fish grilled, sundowners poured, tomorrow already planned. The luxury here isn't gold taps — it's not having to think about a thing.",
+    img: "/images/o_butler.jpg",
+    alt: "Chef Bernardo with fresh-baked bread in the villa",
+  },
+];
+---
+<Base>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Vilanculos · Mozambique</p>
+      <h1>Barefoot luxury on the edge of the Bazaruto.</h1>
+      <p>Six private beach villas. Your own butler and chef. One hour from Johannesburg —
+        and a world from everything.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#book">Plan your stay</a>
+        <a class="btn btn-light" href="#villas">See the villas</a>
+      </div>
+      <div class="trust">★ <b>9.3 / 10</b> on Booking.com · “Superb”</div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="wrap">
+      <p>Some places try to impress you. This one just lets you breathe.</p>
+      <p class="body" style="margin-top:1.5rem;">
+        Vila do Paraíso is six private villas on a quiet stretch of Mahaque Beach, where the
+        Indian Ocean turns every shade of blue and the Bazaruto Archipelago waits a short boat
+        ride away. You get the whole villa — your people, your pool, your deck over the water —
+        and someone to take care of everything else. A butler. A chef. The tide tables.
+      </p>
+      <p class="star-rule" style="margin-top:2rem;"><span>★</span></p>
+      <p class="body" style="font-family:var(--font-display); font-size:1.3rem;">
+        Intentionally simple. So the nature does the talking.
+      </p>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="experiences" class="band-sand">
+    <div class="wrap">
+      <p class="eyebrow">Why Vila do Paraíso</p>
+      <h2 class="measure">Five reasons to point the plane east.</h2>
+      <div class="pillars">
+        {pillars.map((p) => (
+          <article class="pillar">
+            <div class="ph"><img src={p.img} alt={p.alt} loading="lazy" /></div>
+            <div class="txt">
+              <span class="num">{p.n}</span>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN DOOR STRIP -->
+  <section class="strip">
+    <div class="wrap">
+      <p class="eyebrow">An open door to the Bazaruto</p>
+      <h2 class="measure" style="margin-inline:auto;">The whole archipelago, off your own sand.</h2>
+      <p class="measure" style="margin-inline:auto;">
+        Island-hop by dhow or catamaran, picnic on the dunes, snorkel a reef that belongs in a
+        documentary, and be home for sundowners on your deck.
+      </p>
+      <a class="btn btn-light" href="#book" style="margin-top:1rem;">See the experiences</a>
+    </div>
+  </section>
+
+  <!-- THE TABLE -->
+  <section id="table">
+    <div class="wrap split reverse">
+      <div class="media"><img src="/images/o_patio.jpg" alt="Shaded dining patio beside a private pool" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">The Table — full board, barefoot</p>
+        <h2>You don’t lift a finger.</h2>
+        <p>No shopping, no cooking, no dishes, no “what’s for dinner.” Just tell Chef what your
+          people love, and it appears — on the deck, on the beach, under the stars.</p>
+        <p>The food is honest and of this place: fish landed that morning, peri-peri prawns,
+          matapa and coconut rice, tropical fruit at breakfast, and a cold 2M as the sun goes
+          down. Full board, included, at a price that makes sense — not an island bill.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VILLAS GALLERY -->
+  <section id="villas" class="band-sand">
+    <div class="wrap">
+      <p class="eyebrow">The Villas</p>
+      <h2 class="measure">Six villas. One ocean. All yours.</h2>
+      <p class="measure">Four en-suite, air-conditioned bedrooms — sleeps up to eight. A private
+        plunge pool, a deck over the beach, an open-plan kitchen and living, and a butler who
+        already knows how you take your coffee.</p>
+      <div class="gallery">
+        <img class="wide" src="/images/o_villa1_main.jpg" alt="Beachfront thatched villa" loading="lazy" />
+        <img class="tall" src="/images/o_pool.jpg" alt="Private plunge pool under thatch" loading="lazy" />
+        <img src="/images/vdp_04.jpg" alt="Villa bedroom with mosquito-net bed" loading="lazy" />
+        <img src="/images/vdp_02.jpg" alt="Villa exterior framed by palms" loading="lazy" />
+        <img src="/images/o_bar.jpg" alt="Poolside bar and clubhouse" loading="lazy" />
+        <img src="/images/vdp_03.jpg" alt="Villa entrance through tropical garden" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- GETTING HERE -->
+  <section id="getting-here" class="band-aqua">
+    <div class="wrap" style="text-align:center;">
+      <p class="eyebrow">Getting here</p>
+      <h2 class="measure" style="margin-inline:auto;">Barefoot, not far.</h2>
+      <p class="measure" style="margin-inline:auto;">
+        A one-hour flight from Johannesburg lands you in Vilanculos. Ten minutes later you’re at
+        the gate with sand already in your shoes. We’ll meet you. All you really need is a
+        passport and a swimsuit.
+      </p>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section id="book">
+    <div class="wrap">
+      <p class="eyebrow">Book direct</p>
+      <h2 class="measure">Stay, eat and explore — sorted in a few taps.</h2>
+      <div class="book-grid">
+        <div class="book-card">
+          <span class="tag">Stay</span>
+          <h3>Your villa</h3>
+          <p>Pick your dates and your villa. Full board is included — beds, a butler, a chef,
+            and every meal.</p>
+          <p class="note">Booking engine to be connected (Lodgify). See docs/02.</p>
+        </div>
+        <div class="book-card">
+          <span class="tag">Eat</span>
+          <h3>Make a night special</h3>
+          <p>Add a private dinner on the dunes or a beach braai under the stars to any stay.</p>
+          <p class="note">Dining add-ons via the stay booking.</p>
+        </div>
+        <div class="book-card">
+          <span class="tag">Do</span>
+          <h3>On the water</h3>
+          <p>Add fishing, diving, snorkelling, island hops and dune picnics — on our own boats.</p>
+          <p class="note">Activities engine to be connected (FareHarbor). See docs/02.</p>
+        </div>
+      </div>
+      <div class="hero-cta" style="margin-top:2rem;">
+        <a class="btn btn-primary" href="https://wa.me/">Enquire on WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:stay@viladoparaiso.com">Email us</a>
+      </div>
+    </div>
+  </section>
+</Base>

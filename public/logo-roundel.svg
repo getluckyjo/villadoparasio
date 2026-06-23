@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Vila do Paraiso roundel">
+  <title>Vila do Paraiso — simplified roundel mark</title>
+  <desc>Interpretive simplified mark distilled from the Vila do Paraiso badge: palms, sun, sky dome and birds in a circle. Pending the official vector master.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C0E8F0"/>
+      <stop offset="1" stop-color="#EAF6F9"/>
+    </linearGradient>
+    <clipPath id="disc"><circle cx="256" cy="256" r="232"/></clipPath>
+  </defs>
+
+  <circle cx="256" cy="256" r="232" fill="url(#sky)"/>
+
+  <g clip-path="url(#disc)">
+    <!-- sun -->
+    <circle cx="256" cy="318" r="106" fill="#FAC926"/>
+    <!-- ground -->
+    <path d="M24 356 Q256 328 488 356 L488 488 L24 488 Z" fill="#EAF6F9"/>
+    <path d="M24 358 Q256 330 488 358" fill="none" stroke="#3E3432" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#3E3432">
+      <path d="M150 356 q-5 -34 -15 -56 q17 22 23 56 Z"/>
+      <path d="M168 356 q2 -30 -3 -52 q13 24 15 52 Z"/>
+      <path d="M356 356 q6 -32 19 -54 q-7 26 -9 54 Z"/>
+      <path d="M376 356 q0 -28 7 -48 q4 26 5 48 Z"/>
+    </g>
+
+    <!-- main palm: trunk + drooping fronds (stroke-based) -->
+    <g fill="none" stroke="#3E3432" stroke-linecap="round">
+      <path d="M250 356 Q243 256 251 156" stroke-width="13"/>
+      <g stroke-width="14">
+        <path d="M251 156 Q168 116 116 150"/>
+        <path d="M251 156 Q160 156 132 210"/>
+        <path d="M251 156 Q205 92 168 70"/>
+        <path d="M251 156 Q252 92 254 48"/>
+        <path d="M251 156 Q300 86 342 74"/>
+        <path d="M251 156 Q352 116 404 150"/>
+        <path d="M251 156 Q356 158 384 210"/>
+        <path d="M251 156 Q300 206 282 256"/>
+        <path d="M251 156 Q202 206 222 256"/>
+      </g>
+    </g>
+    <!-- coconuts -->
+    <g fill="#3E3432"><circle cx="246" cy="168" r="7"/><circle cx="262" cy="170" r="7"/><circle cx="254" cy="180" r="7"/></g>
+
+    <!-- secondary palm -->
+    <g fill="none" stroke="#3E3432" stroke-linecap="round">
+      <path d="M330 356 Q325 296 333 236" stroke-width="11"/>
+      <g stroke-width="12">
+        <path d="M333 236 Q255 214 216 240"/>
+        <path d="M333 236 Q252 238 244 286"/>
+        <path d="M333 236 Q302 182 272 164"/>
+        <path d="M333 236 Q338 182 343 150"/>
+        <path d="M333 236 Q392 186 422 186"/>
+        <path d="M333 236 Q412 226 442 258"/>
+        <path d="M333 236 Q402 258 396 304"/>
+      </g>
+    </g>
+
+    <!-- birds -->
+    <g fill="none" stroke="#3E3432" stroke-width="7" stroke-linecap="round">
+      <path d="M352 118 Q366 102 378 116 Q390 102 404 118"/>
+      <path d="M408 150 Q418 138 426 149 Q434 138 444 150"/>
+      <path d="M360 170 Q371 158 379 169 Q387 158 398 170"/>
+    </g>
+  </g>
+
+  <circle cx="256" cy="256" r="232" fill="none" stroke="#3E3432" stroke-width="10"/>
+</svg>
