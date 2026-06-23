@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Vila do Paraiso">
+  <title>Vila do Paraiso favicon</title>
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BFE3EC"/>
+      <stop offset="1" stop-color="#EAF6F9"/>
+    </linearGradient>
+    <clipPath id="d"><circle cx="32" cy="32" r="30"/></clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#s)"/>
+  <g clip-path="url(#d)">
+    <circle cx="32" cy="40" r="16" fill="#F4B82A"/>
+    <g fill="none" stroke="#38322A" stroke-linecap="round">
+      <path d="M32 46 Q30 30 33 18" stroke-width="2.6"/>
+      <g stroke-width="2.8">
+        <path d="M33 18 Q21 13 14 19"/>
+        <path d="M33 18 Q25 9 19 6"/>
+        <path d="M33 18 Q33 9 34 4"/>
+        <path d="M33 18 Q42 9 49 7"/>
+        <path d="M33 18 Q45 13 51 19"/>
+        <path d="M33 18 Q24 26 22 33"/>
+        <path d="M33 18 Q43 26 45 33"/>
+      </g>
+    </g>
+  </g>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#38322A" stroke-width="2.6"/>
+</svg>

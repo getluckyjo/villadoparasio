@@ -21,12 +21,19 @@ dome, beach grass and three birds, over a hand-drawn banner reading **VILA DO PA
 
 | File | Why | Status |
 |---|---|---|
-| `logo-master.ai` / `.svg` / `.pdf` | Vector master — scales for web & print | ⏳ needed |
-| `logo-full-colour.png` | Transparent, high-res primary badge | ⏳ needed (the version shared in chat) |
-| `logo-reverse-white.png/svg` | Single-colour white knockout for the dark footer & over photos | ⏳ to create |
-| `logo-roundel.svg` | Simplified palm-and-sun mark for header/favicon/avatar | ⏳ to commission |
+| `logo-master.ai` / `.svg` / `.pdf` | **Official** vector master of the full badge — scales for web & print | ⏳ needed from owner |
+| `logo-full-colour.png` | Transparent, high-res primary badge (the version shared in chat) | ⏳ needed from owner |
+| `logo-reverse-white.png/svg` | Single-colour white knockout for the dark footer & over photos | ⏳ to create from master |
+| `logo-roundel.svg` / `.png` | Simplified palm-and-sun mark for header / avatar | ✅ **draft in repo** (interpretive) |
+| `favicon.svg` + `favicon-32/180/512.png` | Browser tab + Apple touch + PWA icon | ✅ **draft in repo** (interpretive) |
 | `wordmark.svg` | "VILA DO PARAÍSO" in the brand serif, for tight spaces | ⏳ to commission |
-| `favicon.ico` / `icon-512.png` | Derived from the roundel | ⏳ to derive |
+
+### About the drafts in this folder
+`logo-roundel.*` and `favicon.*` are **interpretive recreations** I built by hand to capture
+the badge's motif (two palms, sun, sky dome, birds, ring) in a clean form that reads at small
+sizes — so the site has a working header mark and favicon today. They are **not** traced from
+the official artwork. Once the **official vector master** lands here, treat it as the source of
+truth: regenerate/redraw the roundel from it, and confirm the exact hex values.
 
 ## How to get the files in
 
