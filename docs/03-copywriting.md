@@ -239,9 +239,13 @@ B&B/self-catering option remains available.
 ## 8. Getting Here
 
 **Headline:** Barefoot, not far.
-> A one-hour flight from Johannesburg lands you in Vilanculos. Ten minutes later you're at
-> the gate with sand already in your shoes. We'll meet you. `{Flight options: airline, schedule}`.
-> All you really need is a passport and a swimsuit.
+> A one-hour flight from Johannesburg lands you in Vilanculos. Ten minutes later you’re at
+> the gate with sand already in your shoes — and we’ll be there to meet you. As a South African
+> you don’t even need a visa, so all it really takes is your passport and a swimsuit.
+> `{Flight options: airline, schedule}`.
+
+*Note: South African passport holders get visa-free entry to Mozambique for up to 30 days
+(tourism). Worth confirming current rules at booking; other nationalities may need an e-visa.*
 
 **Practical block (FAQ-style):** flights & schedule, transfer, visa/passport, best time to
 visit, what to pack, connectivity, currency `{MZN/ZAR/USD}`. *(Fill from owner facts.)*
