@@ -217,8 +217,13 @@ it's detail-heavy, so it won't read cleanly at small sizes (site header, favicon
 
 > **Do not** redraw or replace the logo without owner sign-off — it has equity. The above is a
 > *system around* it, not a rebrand.
-> **Files needed** (see `/assets/brand/`): vector master (`.ai`/`.svg`/`.pdf`), transparent PNG,
-> and a reverse/white version. Once supplied, I'll add them to the repo and lock the exact hex.
+
+**Now in the repo:** the badge has been **vector-traced to a clean, transparent-background SVG**
+(`/assets/brand/logo.svg`, also `/public/logo.svg`) — pixel-faithful to the original artwork and
+infinitely scalable. It is wired into the **site header** as the primary mark. The simplified
+**roundel** and **favicon** remain for small sizes (footer mark / browser tab) where the detailed
+badge can't read. Still nice-to-have from the owner: the *original editable* vector
+(`.ai`/`.eps`) for print, and a brand-approved **reverse/white** version for dark backgrounds.
 
 ---
 

@@ -22,8 +22,10 @@ dome, beach grass and three birds, over a hand-drawn banner reading **VILA DO PA
 | File | Why | Status |
 |---|---|---|
 | `VDP-LOGO.jpg` | Official full badge (raster, white bg) — from the owner's Drive | ✅ **in repo** |
-| `logo-master.ai` / `.svg` / `.pdf` | **Official vector** master — scales for web & print | ⏳ still needed (raster only so far) |
-| `logo-transparent.png` | Transparent-background version of the badge | ⏳ to create from vector |
+| `logo.svg` | **Vector trace of the real badge** — transparent bg, scalable; primary site mark | ✅ **in repo** (traced) |
+| `logo-transparent.png` | Transparent-background raster of the badge | ✅ **in repo** |
+| `logo-master.ai` / `.eps` | Original *editable* vector for print | ⏳ nice-to-have from owner |
+| `logo-reverse.svg` | Brand-approved white/reverse version for dark backgrounds | ⏳ to create |
 | `logo-reverse-white.png/svg` | Single-colour white knockout for the dark footer & over photos | ⏳ to create from master |
 | `logo-roundel.svg` / `.png` | Simplified palm-and-sun mark for header / avatar | ✅ **draft in repo** (interpretive) |
 | `favicon.svg` + `favicon-32/180/512.png` | Browser tab + Apple touch + PWA icon | ✅ **draft in repo** (interpretive) |
