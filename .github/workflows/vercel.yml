@@ -1,0 +1,25 @@
+name: Deploy to Vercel (production)
+
+# Manual only — runs on GitHub's runners (which can reach Vercel), never from the sandbox.
+# Requires a repository secret named VERCEL_TOKEN.
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Vercel CLI
+        run: npm i -g vercel@latest
+      - name: Deploy to production
+        run: |
+          vercel deploy --prod --yes --token "$VERCEL_TOKEN" | tee deploy-url.txt
+          echo "PRODUCTION URL: $(tail -n1 deploy-url.txt)"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+
+import { waLink } from "../../config";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (n: string) => `${base}/images/${n}`;
+const wa = waLink("Hi Vila do Paraíso, we'd like to plan some experiences during our stay.");
+
+const experiences = [
+  { title: "World-class fishing", body: "Marlin, sailfish, tuna and GTs in the Bazaruto channel — on our own catamarans.", img: "wa-1.jpeg", href: `${base}/experiences/fishing`, alt: "Guests with the day's catch beside the catamaran" },
+  { title: "Snorkelling & diving", body: "Two Mile Reef and two hundred kinds of blue — easy reefs for the kids, deeper walls for the brave.", img: "two-mile-reef.jpg", href: `${base}/experiences/diving`, alt: "Coral garden and reef fish" },
+  { title: "Island hopping", body: "Sail into the Bazaruto by catamaran or dhow — sandbanks, reefs and empty islands.", img: "island-santa-carolina.jpg", href: `${base}/experiences/island-hopping`, alt: "Aerial of a Bazaruto archipelago island ringed by turquoise water" },
+  { title: "Picnic on the dunes", body: "We carry it all up the great sand dunes and leave you to a 360° view of blue.", img: "boat-1.webp", href: `${base}/#book`, alt: "Catamaran on a white sandbank" },
+];
+---
+<Base title="Experiences — Vila do Paraíso, Vilanculos" description="An open door to the Bazaruto Archipelago: world-class fishing, snorkelling and diving on Two Mile Reef, island hopping by catamaran and dhow, dune picnics and a Vilanculos township food tour.">
+  <PageHero
+    eyebrow="Experiences"
+    title="An open door to the Bazaruto."
+    sub="Do as much, or as little, as you like. Fish the channel, dive the reef, sail to an island, picnic on a dune, taste the town — or do absolutely nothing, which is also world-class here."
+    image="boat-2.webp"
+  />
+
+  <section>
+    <div class="wrap">
+      <div class="pillars">
+        {experiences.map((e) => (
+          <a class="pillar" href={e.href} style="text-decoration:none;color:inherit;">
+            <div class="ph"><img src={img(e.img)} alt={e.alt} loading="lazy" /></div>
+            <div class="txt">
+              <h3>{e.title}</h3>
+              <p>{e.body}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        <a class="btn btn-ghost" href={`${base}/#book`}>All ways to book</a>
+      </div>
+    </div>
+  </section>
+</Base>

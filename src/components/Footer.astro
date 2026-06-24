@@ -1,0 +1,38 @@
+---
+import { waLink, mailLink, EMAIL } from "../config";
+const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href={`${base}/`} style="margin-bottom:1rem;">
+          <img src={`${base}/logo-roundel.svg`} alt="" width="46" height="46" />
+          <span><b>Vila do Paraíso</b><small>Moçambique</small></span>
+        </a>
+        <p class="measure">Six private beach villas on Mahaque Beach, Vilanculos — your own
+          butler and chef, full board, and the open door to the Bazaruto Archipelago.
+          Barefoot luxury, one hour from Johannesburg.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href={`${base}/villas`}>The Villas</a><br/>
+        <a href={`${base}/the-table`}>The Table</a><br/>
+        <a href={`${base}/experiences`}>Experiences</a><br/>
+        <a href={`${base}/#getting-here`}>Getting Here</a><br/>
+        <a href={`${base}/#book`}>Book a Stay</a></p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p>Vilanculos, Inhambane<br/>Mozambique<br/>
+        <a href={waLink()} target="_blank" rel="noopener">WhatsApp us</a><br/>
+        <a href={mailLink()}>{EMAIL}</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} Vila do Paraíso · Villa do Paraiso, Vilanculos, Mozambique</span>
+      <span>Barefoot luxury on the edge of the Bazaruto.</span>
+    </div>
+  </div>
+</footer>

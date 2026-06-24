@@ -1,0 +1,18 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const nav = [
+  { label: "The Villas", href: `${base}/villas` },
+  { label: "The Table", href: `${base}/the-table` },
+  { label: "Experiences", href: `${base}/experiences` },
+  { label: "Getting Here", href: `${base}/#getting-here` },
+];
+---
+<header class="site-header">
+  <a class="brand" href={`${base}/`} aria-label="Vila do Paraíso home">
+    <img class="brand-logo" src={`${base}/logo.svg`} alt="Vila do Paraíso, Moçambique" width="120" height="100" />
+  </a>
+  <nav class="nav" aria-label="Primary">
+    {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+    <a class="btn btn-primary" href={`${base}/#book`}>Book</a>
+  </nav>
+</header>

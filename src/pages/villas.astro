@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (n: string) => `${base}/images/${n}`;
+
+const gallery = [
+  { src: img("villa-1.webp"), alt: "Sunset over the beach deck and loungers", cls: "wide" },
+  { src: img("villa-2.webp"), alt: "Infinity pool over the ocean at golden hour", cls: "tall" },
+  { src: img("vdp_room.jpg"), alt: "Bedroom with mosquito-net bed opening to the deck", cls: "" },
+  { src: img("o_villa1_main.jpg"), alt: "Beachfront thatched villa", cls: "" },
+  { src: img("o_villa5_balcony.jpg"), alt: "Ocean view through the palms from a villa balcony", cls: "" },
+  { src: img("o_patio.jpg"), alt: "Shaded dining patio beside the pool", cls: "" },
+];
+---
+<Base title="The Villas — Vila do Paraíso, Vilanculos" description="Six private beachfront villas in Vilanculos, Mozambique. Four en-suite bedrooms, a private plunge pool, a deck over the beach — and your own butler and chef.">
+  <PageHero
+    eyebrow="The Villas"
+    title="A whole beach house, just for your people."
+    sub="Six private villas on Mahaque Beach. Book one and it's yours alone — four bedrooms, a private pool, and a butler who already knows how you take your coffee."
+    image="villa-1.webp"
+  />
+
+  <section>
+    <div class="wrap split">
+      <div class="media"><img src={img("vdp_room.jpg")} alt="Airy bedroom with mosquito net and doors to the deck" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Room to breathe</p>
+        <h2>Four bedrooms. Sleeps eight.</h2>
+        <p>Each villa has four en-suite, air-conditioned bedrooms with mosquito nets and an
+          electronic safe — room enough for the whole family or your whole crew of friends under
+          one thatch. Wake to the sound the ocean makes when no one else is around.</p>
+        <ul class="checklist">
+          <li>4 en-suite bedrooms, air-conditioned, sleeps up to 8</li>
+          <li>Open-plan kitchen, living and dining — indoor-outdoor</li>
+          <li>Daily housekeeping, laundry and babysitting on request</li>
+          <li>Wi-Fi, electronic safes, mosquito nets throughout</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap split reverse">
+      <div class="media"><img src={img("vdp_01.jpg")} alt="Private pool and deck at sunset" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Your own water</p>
+        <h2>A private plunge pool and a deck over the beach.</h2>
+        <p>Fall into the pool when the day gets warm; dry off on a deck that looks straight out
+          over the Indian Ocean to the islands. The sea is steps away, warm and gentle — the kind
+          of front garden you don't want to leave.</p>
+        <ul class="checklist">
+          <li>Private plunge pool and furnished patio</li>
+          <li>Deck and verandah with uninterrupted island views</li>
+          <li>BBQ facilities for a braai on the sand</li>
+          <li>Steps from a quiet stretch of Mahaque Beach</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Looked after</p>
+      <h2 class="measure">A butler and a chef come with the house.</h2>
+      <p class="measure">This is the part you'll love most: you don't lift a finger. Your butler
+        keeps the villa running and the sundowners coming; your chef cooks whatever your people
+        love, on the deck, on the beach, under the stars. Full board, included — no shopping, no
+        cooking, no dishes.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={`${base}/the-table`}>Meet the table</a>
+        <a class="btn btn-ghost" href={`${base}/#book`}>Check dates</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap">
+      <p class="eyebrow">Look around</p>
+      <h2 class="measure">A few corners of home.</h2>
+      <div class="gallery">
+        {gallery.map((g) => <img class={g.cls} src={g.src} alt={g.alt} loading="lazy" />)}
+      </div>
+    </div>
+  </section>
+</Base>

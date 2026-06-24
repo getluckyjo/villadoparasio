@@ -1,0 +1,49 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (n: string) => `${base}/images/${n}`;
+---
+<Base title="Island hopping — the Bazaruto Archipelago" description="Sail into the Bazaruto Archipelago by catamaran or traditional dhow — white sandbanks, reefs in the middle of nowhere, beach picnics on empty islands, and home for sundowners on your deck.">
+  <PageHero
+    eyebrow="Experiences · Island hopping"
+    title="The whole archipelago, off your own beachfront villa."
+    sub="Sail into the Bazaruto by catamaran or dhow — and be home for sundowners on the deck."
+    image="island-santa-carolina.jpg"
+  />
+
+  <section>
+    <div class="wrap split">
+      <div class="media"><img src={img("boat-1.webp")} alt="Catamaran on a white sandbank" loading="lazy" /></div>
+      <div>
+        <a class="back-link" href={`${base}/experiences`}>← All experiences</a>
+        <p class="eyebrow">A day on the water</p>
+        <h2>Sandbanks, reefs and empty islands.</h2>
+        <p>The Bazaruto Archipelago is a string of five islands wrapped in turquoise — white
+          sandbanks that appear at low tide, reefs in the middle of nowhere, and great dunes you
+          can climb for a 360° view of blue. We set out from your beach on our own catamarans, or
+          slow it right down under the sail of a traditional dhow.</p>
+        <p>Pack nothing. We'll carry the picnic, the shade and the cold drinks, set it all up on an
+          empty island, and have you home in time for sundowners on the deck.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap">
+      <h2 class="measure">Ways to spend a day out there.</h2>
+      <ul class="checklist measure">
+        <li>Catamaran cruise into the archipelago, snorkel stops along the way</li>
+        <li>Traditional dhow sail at sunset</li>
+        <li>Beach picnic or braai set up on a deserted island</li>
+        <li>Two Mile Reef snorkelling on the way through</li>
+        <li>Sandbank stops that only exist at low tide</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={`${base}/#book`}>Plan a day on the water</a>
+        <a class="btn btn-ghost" href={`${base}/experiences/fishing`}>Add some fishing →</a>
+      </div>
+    </div>
+  </section>
+</Base>

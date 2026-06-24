@@ -1,0 +1,70 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const img = (n: string) => `${base}/images/${n}`;
+
+const life = [
+  { k: "Year-round", t: "Reef & turtles", d: "Coral gardens with 200-plus species of fish, and turtles cruising the shallows all year." },
+  { k: "Oct – April", t: "Whale sharks", d: "The gentle giants move through the warm summer water — snorkel alongside the biggest fish in the sea." },
+  { k: "May – October", t: "Humpback whales", d: "Migrating humpbacks pass the archipelago; calm winter seas and the best visibility of the year." },
+  { k: "Any level", t: "Easy to advanced", d: "Shallow reefs the kids can snorkel, and deeper walls and drop-offs for certified divers." },
+];
+---
+<Base title="Snorkelling & diving — Two Mile Reef, Bazaruto" description="Crystal-clear snorkelling and diving on Two Mile Reef in the Bazaruto Archipelago — coral gardens, 200+ fish species, turtles year-round, whale sharks (Oct–Apr) and humpback whales (May–Oct).">
+  <PageHero
+    eyebrow="Experiences · Snorkelling & diving"
+    title="Two Mile Reef and two hundred kinds of blue."
+    sub="Warm, clear water over coral gardens that belong in a documentary — a short boat ride off your own beach."
+    image="two-mile-reef.jpg"
+  />
+
+  <section>
+    <div class="wrap split">
+      <div class="media"><img src={img("two-mile-reef.jpg")} alt="Coral garden and tropical fish at Two Mile Reef" loading="lazy" /></div>
+      <div>
+        <a class="back-link" href={`${base}/experiences`}>← All experiences</a>
+        <p class="eyebrow">The reef</p>
+        <h2>Coral gardens, full of life.</h2>
+        <p>Two Mile Reef in the heart of the Bazaruto Archipelago is one of the great snorkelling
+          and diving sites on this coast — over 200 species of fish moving through warm, clear,
+          subtropical water. The shallows are gentle enough for a child's first mask-and-snorkel;
+          the walls and drop-offs are deep enough to keep certified divers grinning.</p>
+        <p>Gear and guiding are arranged for you; all you bring is the swimsuit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-sand">
+    <div class="wrap">
+      <p class="eyebrow">Who you'll meet down there</p>
+      <h2 class="measure">A reef that changes with the seasons.</h2>
+      <div class="info-grid">
+        {life.map((l) => (
+          <div class="info-card">
+            <span class="k">{l.k}</span>
+            <h4>{l.t}</h4>
+            <p>{l.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="measure">First snorkel or hundredth dive.</h2>
+      <ul class="checklist measure">
+        <li>Guided snorkelling trips for all ages, easy and calm</li>
+        <li>Scuba for certified divers; deeper reefs and walls</li>
+        <li>Whale-shark and turtle encounters in season</li>
+        <li>All gear and a guide sorted — just turn up</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={`${base}/#book`}>Book a dive or snorkel</a>
+        <a class="btn btn-ghost" href={`${base}/experiences/island-hopping`}>Pair it with an island day →</a>
+      </div>
+    </div>
+  </section>
+</Base>
